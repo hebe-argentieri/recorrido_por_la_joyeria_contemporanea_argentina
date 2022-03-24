@@ -1,0 +1,758 @@
+var yml = `
+
+titulo: Recorrido por la Joyería Contemporánea Argentina
+
+cfg:
+
+    menu_cronologico:
+        mostrar_fecha: false
+
+    grupos:
+        colores:
+            a: '#ffa700'
+            b: '#ffff00'
+            c: '#00ff00'
+            d: '#22ffff'
+            e: '#ff00ff'
+            f: '#9f00ff'
+            g: '#ff0000'
+            x: '#000000'
+            y: '#ffffff'
+            z: '#9e9e9e'
+    
+    panel_flotante: 
+        color_fondo: rgba(255,255,255,.9)
+
+    mostrar_numero_en_titulo: false
+
+
+elementos:
+
+  intro: 
+    titulo: '[ Intro ]'
+    ancho: 40
+    icono: video
+    contenido: 
+        - [video, intro.mp4]
+
+  60y70s:
+    titulo: Años 60s y 70s
+    ancho: 40
+    icono: secuencia
+    contenido: 
+        - [secuencia, 60y70s]
+
+  90s:
+    titulo: Años 90s. La Nave / María Medici
+    ancho: 40
+    icono: secuencia
+    contenido:
+        - [secuencia, 90s]
+
+  2001cr:
+    titulo: 2001 Cecilia Richard
+    ancho: 40
+    icono: secuencia
+    contenido:
+        - [secuencia, 2001cr]
+
+
+  complices1:
+    numero: '01'
+    titulo: Cómplices
+    subtitulo: Memoria
+    anno: 2006 
+    mes: 5
+    dia: 4
+    grupo: a
+    ancho: 40
+    ubicacion: 300
+    icono: secuencia
+    contenido:
+        - [secuencia, complices1]
+
+  lazos_de_la_tierra:
+    subtitulo: Lazos de la tierra
+    anno: 2006
+    mes: 11
+    grupo: z
+    ancho: 50
+    icono: secuencia
+    contenido:
+        - [secuencia, lazos_de_la_tierra]
+
+  fwiya0:
+    titulo: Fwiya
+    subtitulo: Joyería contemporánea
+    anno: 2007
+    mes: 3
+    grupo: z 
+    ancho: 60
+    icono: video
+    contenido:
+        - [video, fwiya.mp4]
+
+  complices2:
+    titulo: Cómplices
+    subtitulo: Alicia en el país de las maravillas
+    anno: 2007
+    mes: 7
+    dia: 4
+    grupo: a
+    ancho: 80
+    contenido:
+        - [secuencia, complices2]
+
+  km00:
+    titulo: KM0
+    subtitulo: Joyería contemporánea
+    anno: 2007 
+    mes: 12
+    dia: 18
+    grupo: b
+    ancho: 60
+    icono: secuencia
+    contenido:
+        - [secuencia, km00]
+
+  complices3:
+    titulo: Cómplices
+    subtitulo: Caminos
+    anno: 2008 
+    mes: 11
+    dia: 6
+    grupo: a
+    ancho: 40
+    contenido:
+        - [secuencia, complices3]
+
+  joyeria_biologica:
+    titulo: Joyería Biológica  
+    subtitulo: Orquídeas
+    anno: 2008
+    mes: 12
+    dia: 29
+    grupo: z
+    ancho: 90
+    icono: secuencia
+    contenido:
+        - [secuencia, joyeria_biologica]
+
+  la_nave:
+    numero: '02'
+    titulo: La Nave
+    anno: 2008 
+    mes: 12
+    dia: 15
+    grupo: c
+    ancho: 60
+    icono: video
+    contenido:
+        - [video, la_nave.mp4]
+
+  fwiya1:
+    numero: '03'
+    titulo: Joyas que cuentan
+    subtitulo: Fwiya. Fabiana Gadano
+    texto: Talleres de Graciela Lescano y Fabiana Gadano
+    anno: 2009 
+    mes: 8
+    dia: 1
+    grupo: z
+    ancho: 40
+    icono: secuencia
+    contenido:
+        - [secuencia, fwiya1]
+
+  enigma:
+    titulo: Enigma
+    anno: 2009 
+    mes: 9
+    dia: 1
+    grupo: z
+    ancho: 70
+    contenido:
+        - [secuencia, enigma]
+
+  fwiya2:
+    titulo: Fwiya
+    subtitulo: Identidad
+    anno: 2009
+    mes: 12
+    grupo: d
+    ancho: 50
+    contenido:
+        - [secuencia, fwiya2]
+
+  km01:
+    numero: '04'
+    titulo: KM0
+    subtitulo: transformándo[nos]
+    anno: 2010 
+    mes: 6
+    grupo: b
+    ancho: 40
+    icono: secuencia
+    contenido:
+        - [secuencia, km01]
+
+  complices4:
+    titulo: Cómplices
+    subtitulo: Cartas
+    anno: 2010
+    mes: 10
+    dia: 6
+    grupo: a
+    ancho: 90
+    contenido:
+        - [secuencia, complices4]
+
+  ja1:
+    numero: '05'
+    titulo: '[ JA ]'
+    subtitulo: Que nos une
+    anno: 2010
+    mes: 10
+    dia: 13
+    grupo: e
+    ancho: 65
+    icono: secuencia
+    contenido:
+        - [secuencia, ja1]
+
+  heterogeneidad:
+    subtitulo: Heterogeneidad del Rio de la Plata
+    anno: 2010
+    mes: 12
+    grupo: z
+    ancho: 40
+    contenido:
+        - [secuencia, heterogeneidad]
+
+  la_calesita:
+    subtitulo: La Calesita
+    texto: Taller de Tali Wasserman
+    anno: 2011
+    mes: 6
+    dia: 30
+    grupo: z
+    ancho: 50
+    contenido:
+        - [secuencia, la_calesita]
+
+  cruzando_fronteras:
+    numero: '10'
+    titulo: Cruzando Fronteras
+    subtitulo: Del textil a la joya
+    anno: 2011
+    mes: 11
+    grupo: b
+    ancho: 70
+    icono: secuencia
+    contenido:
+        - [secuencia, cruzando_fronteras]
+
+  complices5:
+    titulo: Cómplices
+    subtitulo: Fiesta
+    anno: 2012 
+    mes: 7
+    dia: 14
+    grupo: a
+    ancho: 45
+    contenido:
+        - [secuencia, complices5]
+
+  deseo:
+    numero: '06'
+    titulo: Deseo
+    subtitulo: Fabiana Gadano
+    anno: 2012 
+    mes: 10
+    dia: 19
+    grupo: z
+    ancho: 95
+    contenido:
+        - [secuencia, deseo]
+  
+  km02:
+    titulo: KM0
+    subtitulo: Ciclos
+    anno: 2012
+    mes: 10
+    grupo: b
+    ancho: 70
+    contenido:
+        - [secuencia, km02]
+
+  entre_lo_visible_y_lo_invisible:
+    subtitulo: Entre lo visible y lo invisible
+    texto: Taller La Nave
+    anno: 2012
+    mes: 11
+    grupo: c
+    ancho: 60
+    contenido:
+        - [secuencia, entre_lo_visible_y_lo_invisible]
+
+  fwiya3:
+    titulo: Fwiya
+    subtitulo: Cada Loco con su tema
+    texto: Joyería en Refranes
+    anno: 2012
+    mes: 11
+    dia: 26
+    grupo: d
+    ancho: 40
+    contenido:
+        - [secuencia, fwiya3]
+
+  ja2:
+    titulo: '[ JA ]'
+    subtitulo: Tiempo
+    anno: 2013
+    mes: 9
+    dia: 3
+    grupo: e
+    ancho: 40
+    contenido:
+        - [secuencia, ja2]
+
+  las_emociones:
+    numero: '08'
+    titulo: Las Emociones
+    anno: 2013
+    mes: 10
+    grupo: b
+    ancho: 60
+    icono: secuencia
+    contenido:
+        - [secuencia, las_emociones]
+
+  conjuncion:
+    titulo: Conjunción
+    anno: 2013
+    mes: 10
+    grupo: z
+    ancho: 90
+    contenido:
+        - [secuencia, conjuncion]
+
+  tema_pendiente:
+    numero: '07'
+    titulo: Tema Pendiente
+    texto: Talleres Jorge Castañón-Fabiana Gadano-Mabel Pena
+    anno: 2013
+    mes: 11
+    grupo: c
+    ancho: 50
+    icono: secuencia
+    contenido:
+        - [secuencia, tema_pendiente]
+
+  fwiya4:
+    titulo: Fwiya
+    subtitulo: Verdades Efímeras
+    anno: 2014
+    mes: 5
+    grupo: d
+    ancho: 40
+    contenido:
+        - [secuencia, fwiya4]
+
+  ojala:
+    subtitulo: Ojalá
+    anno: 2015
+    mes: 4
+    dia: 15
+    grupo: z
+    ancho: 35
+    contenido:
+        - [secuencia, ojala]
+
+  ja3:
+    titulo: '[ JA ]'
+    subtitulo: Figuraciones
+    anno: 2015
+    mes: 7
+    dia: 30
+    grupo: e
+    ancho: 50
+    contenido:
+        - [secuencia, ja3]
+
+  beyond_textile:
+    subtitulo: Más allá del textil
+    anno: 2015
+    mes: 9
+    dia: 10
+    grupo: z
+    ancho: 95
+    contenido:
+        - [secuencia, beyond_textile]
+
+  interiores:
+    subtitulo: Interiores
+    anno: 2015
+    mes: 11
+    dia: 4
+    grupo: z
+    ancho: 70
+    contenido:
+        - [secuencia, interiores]
+
+  sutilezas:
+    subtitulo: Sutilezas
+    texto: 16 diseñadores de Beyond Textile
+    anno: 2015
+    mes: 12
+    dia: 8
+    grupo: z
+    ancho: 50
+    contenido:
+        - [secuencia, sutilezas]
+
+  40anios:
+    subtitulo: 40 Años
+    anno: 2016 
+    mes: 3
+    dia: 24 
+    grupo: z
+    ancho: 40
+    contenido:
+        - [secuencia, 40anios]
+
+  somos_lo_que_hacemos:
+    subtitulo: Somos lo que hacemos
+    texto: Taller La Nave, de Jorge Castañón
+    anno: 2016 
+    mes: 4
+    dia: 27 
+    grupo: z
+    ancho: 80
+    contenido:
+        - [secuencia, somos_lo_que_hacemos]
+
+  ja4:
+    titulo: '[ JA ]'
+    subtitulo: 1º Bienal Latinoamericana "PUENTES"
+    anno: 2016
+    mes: 10
+    dia: 27
+    grupo: z
+    ancho: 60
+    contenido:
+        - [secuencia, ja4]
+
+  latinoamerica:
+    subtitulo: Latinoamérica
+    texto: Taller de Tali Wasserman
+    anno: 2016
+    mes: 10
+    dia: 9
+    grupo: z
+    ancho: 80
+    contenido:
+        - [secuencia, latinoamerica]
+
+  mujeres:
+    numero: '09'
+    titulo: Mujeres
+    texto: Talleres de Mabel Pena y Fabiana Gadano
+    anno: 2016
+    mes: 11
+    dia: 7
+    grupo: b
+    ancho: 40
+    icono: video
+    contenido:
+        - [video, mujeres.mp4]
+
+
+
+secuencias:
+    60y70s:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+        - pag-15.jpg
+        - pag-16.jpg
+    cruzando_fronteras:
+        - pag-1.jpg
+        #- pag-2.jpg
+        - pag-3.jpg
+        - pag-4.jpg
+        - pag-5.jpg
+        - pag-6.jpg
+    complices1:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+        - pag-15.jpg
+        - pag-16.jpg
+        - pag-17.jpg
+        - pag-18.jpg
+        - pag-19.jpg
+    fwiya1:
+        - pag-1.jpg
+        - pag-2.jpg
+        - pag-3.jpg
+        - pag-4.jpg
+        - pag-5.jpg
+        - pag-6.jpg
+        - pag-7.jpg
+        - pag-8.jpg
+        - pag-9.jpg
+    ja1:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+        - pag-15.jpg
+        - pag-16.jpg
+        - pag-17.jpg
+        - pag-18.jpg
+        - pag-19.jpg
+        - pag-20.jpg
+        - pag-21.jpg
+        - pag-22.jpg
+        - pag-23.jpg
+        - pag-24.jpg
+        - pag-25.jpg
+        - pag-26.jpg
+        - pag-27.jpg
+        - pag-28.jpg
+        - pag-29.jpg
+        - pag-30.jpg
+        - pag-31.jpg
+        - pag-32.jpg
+        - pag-33.jpg
+        - pag-34.jpg
+    joyeria_biologica:
+        - pag-1.jpg
+        - pag-2.jpg
+        - pag-3.jpg
+    km00:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+        - pag-15.jpg
+        - pag-16.jpg
+    km01:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+    las_emociones:
+        - pag-1.jpg
+        - pag-2.jpg
+        - pag-3.jpg
+        - pag-4.jpg
+        - pag-5.jpg
+        - pag-6.jpg
+    lazos_de_la_tierra:
+        - pag-1.jpg
+        - pag-2.jpg
+        - pag-3.jpg
+    tema_pendiente:
+        - pag-01.jpg
+        - pag-02.jpg
+        - pag-03.jpg
+        - pag-04.jpg
+        - pag-05.jpg
+        - pag-06.jpg
+        - pag-07.jpg
+        - pag-08.jpg
+        - pag-09.jpg
+        - pag-10.jpg
+        - pag-11.jpg
+        - pag-12.jpg
+        - pag-13.jpg
+        - pag-14.jpg
+    90s:
+        - pag-1.jpg
+    2001cr:
+        - pag-1.jpg
+    complices2:
+        - 1.jpg
+    complices3:
+        - 1.jpg
+    enigma:
+        - 1.jpg
+    fwiya2:
+        - 1.jpg
+    complices4:
+        - 1.jpg
+    heterogeneidad:
+        - 1.jpg
+    la_calesita:
+        - 1.jpg
+    complices5:
+        - 1.jpg
+    deseo:
+        - 1.jpg
+    km02:
+        - 1.jpg
+    entre_lo_visible_y_lo_invisible:
+        - 1.jpg
+    fwiya3:
+        - 1.jpg
+    ja2:
+        - 1.jpg
+    conjuncion:
+        - 1.jpg
+    fwiya4:
+        - 1.jpg
+    ojala:
+        - 1.jpg
+    ja3:
+        - 1.jpg
+    beyond_textile:
+        - 1.jpg
+    interiores:
+        - 1.jpg
+    sutilezas:
+        - 1.jpg
+    40anios:
+        - 1.jpg
+    somos_lo_que_hacemos:
+        - 1.jpg
+    ja4:
+        - 1.jpg
+    latinoamerica:
+        - 1.jpg
+
+
+
+
+
+menu_destacado:
+    - intro
+    - 60y70s
+    - 90s
+    - 2001cr
+    - complices1
+    - la_nave
+    - fwiya1
+    - km00
+    - ja1
+    - deseo
+    - tema_pendiente
+    - las_emociones
+    - mujeres
+    - cruzando_fronteras
+
+menu_previo:
+    - intro
+    - 60y70s
+    - 90s
+    - 2001cr
+
+menu_cronologico:
+    - complices1
+    - joyeria_biologica
+    - lazos_de_la_tierra
+    - complices2
+    - fwiya0
+    - km00
+    - la_nave
+    - complices3
+    - fwiya1
+    - km01
+    - cruzando_fronteras
+    - fwiya2
+    - complices4
+    - ja1
+    - heterogeneidad
+    - complices5
+    - deseo
+    - entre_lo_visible_y_lo_invisible
+    - fwiya3
+    - km02
+    - la_calesita
+    - ja2
+    - tema_pendiente
+    - beyond_textile
+    - las_emociones
+    - fwiya4
+    - ojala
+    - ja3
+    - sutilezas
+    - ja4
+    - mujeres
+    - somos_lo_que_hacemos
+    - latinoamerica
+    - interiores
+    - enigma
+    - conjuncion
+    - 40anios
+
+
+textos:
+    test: |
+        texto **markdown** !
+
+        + uno
+        + dos 
+        + tres
+
+        # titulo al final
+    falta: |
+        ... **en construcción** ...
+
+
+
+`;

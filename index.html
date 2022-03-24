@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="handheldfriendly" content="true"/>
+    <meta http-equiv="cleartype" content="on"/>
+
+    <meta name="language" content="spanish"/>
+
+    <meta name="author" content="nodos.dsnn( nodos.dsnn@gmail.com )"/>
+
+    <meta name="description" content="Aplicativo para presentación y pasos instructivos"/>
+    
+    <title>Presentación</title>
+  
+    <link rel="shortcut icon" href="./codigo/img/favicon.ico"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
+    <link href="./codigo/css/basico.css" rel="stylesheet">
+    <link href="./codigo/css/responsive.css" rel="stylesheet">
+    <link href="./codigo/css/sitio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header>
+      <h1 id="titulo"></h1>
+    </header>
+    
+    <section id="mn_destacados">
+      <button class="conmutar" acc="conmutar_visibilidad;iniciar"></button>
+      <nav acc="menu_destacados;iniciar"></nav>
+    </section>
+
+    <section  class="col w1d1 fondo_gris">
+      <div class="col w1d6 fondo_negro">
+        <nav id="mn_cronologico" acc="menu_cronologico;iniciar"></nav>
+      </div>
+      
+      <div  class="col w5d6">
+        <div id="logo_ja"><img src="./codigo/img/logo_ja_bco.png"></div>
+        <nav id="mn_previo" acc="menu_previo;iniciar"></nav>
+        <nav id="mn_grafico" acc="menu_grafico;iniciar"></nav>
+      </div>
+    </section>
+
+    <div id="panel_flotante">
+      <button class="cerrar" title="cerrar panel"></button>
+      <div class="mn_utiles"></div>
+      <div class="contenido">
+        <div class="cabecera">
+          <span class="titulo"></span>
+          <span class="fecha"></span>
+        </div>
+        <p class="info"></p>
+      </div>
+    </div>
+
+    <script id="datos" src="./info/info.yml"></script>
+    
+    <script src="./codigo/js/clase.jquery.js"></script>
+    <script src="./codigo/js/clase.yaml.js"></script>
+    <script src="./codigo/js/clase.marked.js"></script>
+    <script src="./codigo/js/clase.underscore.js"></script>
+    <script src="./codigo/js/clase.acciones.js"></script>
+    <script src="./codigo/js/clase.interfaz.js"></script>
+    <script src="./codigo/js/accion.presentacion.js"></script>
+
+ 
+    <!-- plantillas para contenido dinamico -->
+    <script id="plantilla_item_menu_previo" type="text/template">
+      <div class="bloque">
+        <p class="info">
+          <a href="">
+            <b></b>
+            <span class="linea"></span>
+            <span class="icono"></span>
+          </a>
+        </p>
+      </div>
+    </script>
+
+    <script id="plantilla_item_menu_grafico" type="text/template">
+      <div class="bloque">
+        <p class="imagen"></p>
+        <p class="info">
+          <a href="">
+            <em></em>
+            <b></b>
+            <i></i>
+            <span class="linea"></span>
+            <span class="icono"></span>
+          </a>
+        </p>
+      </div>
+    </script>
+
+    <script id="plantilla_visor_video" type="text/template">
+      <div class="visor_video">
+        <video width="80%" controls>
+          <source src="" type="video/mp4">
+        </video> 
+      </div>
+    </script>
+
+    <script id="plantilla_visor_secuencia" type="text/template">
+      <div class="visor_secuencia">
+        <div class="lista"></div>
+        <div class="imagen"><img src="" width="100%"></div>
+        <div class="menu">
+          <button class="anterior"></button>
+          <button class="siguiente"></button>
+        </div>
+      </div>
+    </script>
+
+    <script id="plantilla_visor_texto" type="text/template">
+      <div class="visor_texto">
+        <p>....</p>
+      </div>
+    </script>
+
+    <script id="plantilla_menu_grupo" type="text/template">
+      <div class="mn_grupo">
+        <button class="anterior" title="anterior item del grupo"></button>
+        <button class="siguiente" title="siguiente item del grupo"></button>
+      </div>
+    </script>
+
+
+  </body>
+</html>
